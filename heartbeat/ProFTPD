@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+if [ -z $1 ]
+then
+  VAR="start"
+else
+  VAR=$1
+fi
+
+if [ "$VAR" = "start" ]
+then
+  systemctl start proftpd
+elif [ "$VAR" = "stop" ]
+then
+ systemctl stop proftpd
+fi
